@@ -17,16 +17,8 @@
   <a class="skip-link" href="#experiencia">Saltar a la experiencia 3D</a>
 
   <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="AQUA 2040 inicio">
-      <span class="brand-symbol"><i></i><b></b></span>
-      <span>AQUA<sup>2040</sup></span>
-    </a>
-    <nav aria-label="Navegación principal">
-      <a href="#historia">Escenario</a>
-      <a href="#experiencia">Producto</a>
-      <a href="#sistema">Sistema</a>
-      <a href="#sostenibilidad">Sostenibilidad</a>
-    </nav>
+    <a class="brand" href="#inicio" aria-label="AQUA 2040 inicio"><span class="brand-symbol"><i></i><b></b></span><span>AQUA<sup>2040</sup></span></a>
+    <nav aria-label="Navegación principal"><a href="#historia">Escenario</a><a href="#experiencia">Producto</a><a href="#sistema">Sistema</a><a href="#sostenibilidad">Sostenibilidad</a></nav>
     <a class="header-cta" href="#experiencia"><span></span>Explorar modelo</a>
   </header>
 
@@ -37,136 +29,57 @@
         <p class="eyebrow">HIGIENE PERSONAL ADAPTATIVA</p>
         <h1><span>El baño cambia</span><span>cuando el agua</span><em>se convierte en diseño.</em></h1>
         <p class="hero-lead">AQUA 2040 transforma una necesidad cotidiana en un sistema inteligente de higiene, ahorro y bienestar. Detecta, limpia, optimiza y vuelve a estar listo para el siguiente uso.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#experiencia"><span class="cube-icon">◇</span>Explorar AQUA 2040</a>
-          <a class="button button-ghost" href="#historia">Descubrir el concepto <span>↓</span></a>
-        </div>
-        <div class="hero-signals" aria-label="Funciones principales">
-          <span><i></i>Agua optimizada</span><span><i></i>Higiene 360°</span><span><i></i>Autolimpieza</span><span><i></i>Sensor inteligente</span>
-        </div>
+        <div class="hero-actions"><a class="button button-primary" href="#experiencia"><span class="cube-icon">◇</span>Explorar AQUA 2040</a><a class="button button-ghost" href="#historia">Descubrir el concepto <span>↓</span></a></div>
+        <div class="hero-signals" aria-label="Funciones principales"><span><i></i>Agua optimizada</span><span><i></i>Higiene 360°</span><span><i></i>Autolimpieza</span><span><i></i>Sensor inteligente</span></div>
       </div>
 
       <div class="experience-shell" id="experiencia">
         <div class="model-kicker"><span>MODELO 3D · MESHY</span><span>Arrastra · gira · acerca</span></div>
         <div class="model-stage">
           <div class="stage-rings" aria-hidden="true"><i></i><i></i><i></i></div>
-          <model-viewer id="aqua-model" src="./assets/AQUA_2040_web_optimized.glb" ios-src="./assets/AQUA_2040.usdz" camera-controls auto-rotate rotation-per-second="10deg" shadow-intensity="0.7" exposure="1.05" environment-image="neutral" ar ar-modes="webxr scene-viewer quick-look" alt="Modelo tridimensional de la taza sanitaria AQUA 2040">
-            <button class="ar-button" slot="ar-button">Ver en mi espacio ↗</button>
-            <div class="model-loading" slot="poster"><strong>AQUA</strong><span>2040</span><small>Modelo 3D preparado para explorar</small></div>
+          <model-viewer id="aqua-model" src="./assets/AQUA_2040.glb" ios-src="./assets/AQUA_2040.usdz" camera-controls auto-rotate rotation-per-second="10deg" shadow-intensity="0.7" exposure="1.05" environment-image="neutral" ar ar-modes="webxr scene-viewer quick-look" alt="Modelo tridimensional de la taza sanitaria AQUA 2040">
+            <button class="ar-button" slot="ar-button" type="button">Ver AQUA en mi espacio ↗</button>
+            <div class="model-loading" slot="poster"><strong>AQUA</strong><span>2040</span><small>Preparando modelo 3D…</small></div>
           </model-viewer>
+          <div class="asset-fallback" id="asset-fallback"><strong>Modelo 3D pendiente de publicación</strong><span>Los archivos AQUA_2040.glb y AQUA_2040.usdz deben estar dentro de <b>/assets</b>.</span></div>
           <div class="scan-line" aria-hidden="true"></div>
-          <div class="live-card">
-            <div class="live-title"><span class="pulse"></span>Estado del sistema</div>
-            <dl><div><dt>Agua</dt><dd>OPTIMIZADA</dd></div><div><dt>Higiene</dt><dd>360°</dd></div></dl>
-          </div>
+          <div class="live-card"><div class="live-title"><span class="pulse"></span>Estado del sistema</div><dl><div><dt>Agua</dt><dd>OPTIMIZADA</dd></div><div><dt>Higiene</dt><dd>360°</dd></div></dl></div>
           <div class="model-badge">AQUA / CONCEPT<br><b>2040</b></div>
           <div class="interaction-hint">◌ Modelo interactivo</div>
         </div>
-        <div class="model-controls"><span>EXPLORA EL PRODUCTO</span><button data-view="front">Frontal</button><button data-view="side">Lateral</button><button data-view="top">Superior</button><button data-reset>Restablecer ↻</button></div>
+        <div class="model-controls"><span>EXPLORA EL PRODUCTO</span><button data-view="front">Frontal</button><button data-view="side">Lateral</button><button data-view="top">Superior</button><button data-ar-open>Realidad aumentada ↗</button><button data-reset>Restablecer ↻</button></div>
       </div>
     </section>
 
-    <section class="flow-band" aria-label="Principios de AQUA 2040">
-      <svg viewBox="0 0 1600 300" preserveAspectRatio="none" role="img" aria-label="Detecta, limpia, optimiza y vuelve a empezar">
-        <path id="flowPath" d="M-80 190 C170 20 370 290 610 155 S1040 45 1250 165 S1500 280 1680 90" />
-        <text><textPath href="#flowPath" startOffset="1%">DETECTA · LIMPIA · OPTIMIZA · SECA · AUTOLIMPIA · AHORRA · AQUA 2040 ·</textPath></text>
-      </svg>
-    </section>
+    <section class="flow-band" aria-label="Principios de AQUA 2040"><svg viewBox="0 0 1600 300" preserveAspectRatio="none"><path id="flowPath" d="M-80 190 C170 20 370 290 610 155 S1040 45 1250 165 S1500 280 1680 90"/><text><textPath href="#flowPath" startOffset="1%">DETECTA · LIMPIA · OPTIMIZA · SECA · AUTOLIMPIA · AHORRA · AQUA 2040 ·</textPath></text></svg></section>
 
     <section class="story section" id="historia">
       <div class="section-marker"><span>01</span> Escenario de uso</div>
-      <div class="story-grid">
-        <div class="story-visual">
-          <div class="water-orbit"><i></i><i></i><i></i></div>
-          <div class="water-core"><span>H₂O</span><small>recurso inteligente</small></div>
-          <div class="visual-label label-a">Consumo optimizado</div>
-          <div class="visual-label label-b">Higiene personalizada</div>
-          <div class="visual-label label-c">2040 / hogar</div>
-        </div>
-        <div class="story-copy">
-          <p class="story-time">Ciudad de México · 2040 · 07:42 h</p>
-          <h2>La tecnología desaparece cuando el usuario deja de necesitarla.</h2>
-          <p>En el hogar de 2040, el sanitario deja de ser únicamente un punto de descarga. AQUA reconoce la presencia del usuario, prepara la experiencia de higiene y adapta el consumo de agua al ciclo requerido.</p>
-          <p>Después del uso, el sistema realiza una rutina de autolimpieza y deja la superficie lista para el siguiente ciclo. La innovación no busca añadir complejidad: busca quitarla.</p>
-          <div class="story-note"><b>Diseñado alrededor del usuario.</b><span>La interfaz se entiende antes de tener que aprenderla.</span></div>
-        </div>
-      </div>
+      <div class="story-grid"><div class="story-visual"><div class="water-orbit"><i></i><i></i><i></i></div><div class="water-core"><span>H₂O</span><small>recurso inteligente</small></div><div class="visual-label label-a">Consumo optimizado</div><div class="visual-label label-b">Higiene personalizada</div><div class="visual-label label-c">2040 / hogar</div></div><div class="story-copy"><p class="story-time">Ciudad de México · 2040 · 07:42 h</p><h2>La tecnología desaparece cuando el usuario deja de necesitarla.</h2><p>En el hogar de 2040, el sanitario deja de ser únicamente un punto de descarga. AQUA reconoce la presencia del usuario, prepara la experiencia de higiene y adapta el consumo de agua al ciclo requerido.</p><p>Después del uso, el sistema realiza una rutina de autolimpieza y deja la superficie lista para el siguiente ciclo. La innovación no busca añadir complejidad: busca quitarla.</p><div class="story-note"><b>Diseñado alrededor del usuario.</b><span>La interfaz se entiende antes de tener que aprenderla.</span></div></div></div>
     </section>
 
-    <section class="sequence section" id="sistema">
-      <div class="sequence-heading">
-        <div class="section-marker"><span>02</span> Secuencia de uso</div>
-        <p class="kicker">De la detección al siguiente usuario</p>
-        <h2>Cuatro momentos. Una experiencia continua.</h2>
-      </div>
-      <ol class="sequence-grid">
-        <li><span>01</span><div class="sequence-icon">⌁</div><h3>Detecta</h3><p>El sensor de presencia activa el sistema y prepara el ciclo personalizado.</p></li>
-        <li><span>02</span><div class="sequence-icon">◌</div><h3>Limpia</h3><p>El agua se regula en posición, temperatura y presión para una higiene integral.</p></li>
-        <li><span>03</span><div class="sequence-icon">≈</div><h3>Seca</h3><p>Un flujo de aire completa la experiencia y reduce la necesidad de papel.</p></li>
-        <li><span>04</span><div class="sequence-icon">✦</div><h3>Renueva</h3><p>Autolimpieza y preparación automática para volver a estar disponible.</p></li>
-      </ol>
-    </section>
+    <section class="sequence section" id="sistema"><div class="sequence-heading"><div class="section-marker"><span>02</span> Secuencia de uso</div><p class="kicker">De la detección al siguiente usuario</p><h2>Cuatro momentos. Una experiencia continua.</h2></div><ol class="sequence-grid"><li><span>01</span><div class="sequence-icon">⌁</div><h3>Detecta</h3><p>El sensor de presencia activa el sistema y prepara el ciclo personalizado.</p></li><li><span>02</span><div class="sequence-icon">◌</div><h3>Limpia</h3><p>El agua se regula en posición, temperatura y presión para una higiene integral.</p></li><li><span>03</span><div class="sequence-icon">≈</div><h3>Seca</h3><p>Un flujo de aire completa la experiencia y reduce la necesidad de papel.</p></li><li><span>04</span><div class="sequence-icon">✦</div><h3>Renueva</h3><p>Autolimpieza y preparación automática para volver a estar disponible.</p></li></ol></section>
 
-    <section class="technology section">
-      <div class="tech-visual">
-        <div class="tech-orbit orbit-a"></div><div class="tech-orbit orbit-b"></div>
-        <div class="tech-core"><strong>A</strong><small>2040</small></div>
-        <span class="tech-chip chip-one">FLOW</span><span class="tech-chip chip-two">UV</span><span class="tech-chip chip-three">AIR</span><span class="tech-chip chip-four">SENSE</span>
-      </div>
-      <div class="tech-copy">
-        <div class="section-marker"><span>03</span> Sistema inteligente</div>
-        <p class="kicker">Tecnología que trabaja en segundo plano</p>
-        <h2>Una interfaz mínima para una experiencia completa.</h2>
-        <p>AQUA integra sensores, control táctil y automatización sin convertir el sanitario en un dispositivo difícil de usar.</p>
-        <div class="tech-list">
-          <div><b>Sensor de presencia</b><span>Activa y adapta funciones automáticamente.</span></div>
-          <div><b>Limpieza frontal y posterior</b><span>Chorro regulable para diferentes perfiles de usuario.</span></div>
-          <div><b>Secado con aire</b><span>Completa la higiene con una experiencia sin contacto.</span></div>
-          <div><b>Autolimpieza</b><span>Rutina posterior para mantener el sistema preparado.</span></div>
-        </div>
-      </div>
-    </section>
+    <section class="technology section"><div class="tech-visual"><div class="tech-orbit orbit-a"></div><div class="tech-orbit orbit-b"></div><div class="tech-core"><strong>A</strong><small>2040</small></div><span class="tech-chip chip-one">FLOW</span><span class="tech-chip chip-two">UV</span><span class="tech-chip chip-three">AIR</span><span class="tech-chip chip-four">SENSE</span></div><div class="tech-copy"><div class="section-marker"><span>03</span> Sistema inteligente</div><p class="kicker">Tecnología que trabaja en segundo plano</p><h2>Una interfaz mínima para una experiencia completa.</h2><p>AQUA integra sensores, control táctil y automatización sin convertir el sanitario en un dispositivo difícil de usar.</p><div class="tech-list"><div><b>Sensor de presencia</b><span>Activa y adapta funciones automáticamente.</span></div><div><b>Limpieza frontal y posterior</b><span>Chorro regulable para diferentes perfiles de usuario.</span></div><div><b>Secado con aire</b><span>Completa la higiene con una experiencia sin contacto.</span></div><div><b>Autolimpieza</b><span>Rutina posterior para mantener el sistema preparado.</span></div></div></div></section>
 
-    <section class="sustainability section" id="sostenibilidad">
-      <div class="section-marker"><span>04</span> Sostenibilidad</div>
-      <div class="sustain-head"><div><p class="kicker">El recurso más valioso es el que aprendemos a usar mejor.</p><h2>Menos agua. Más inteligencia.</h2></div><p>AQUA 2040 plantea el ahorro como parte del funcionamiento, no como una función adicional.</p></div>
-      <div class="sustain-grid">
-        <article class="sustain-main"><div class="drop">◒</div><span class="card-code">WATER / 2040</span><h3>Descarga inteligente</h3><p>El sistema ajusta el volumen de descarga al ciclo necesario mediante un flujo optimizado.</p><div class="efficiency"><span></span></div><small>OBJETIVO CONCEPTUAL · EFICIENCIA HÍDRICA</small></article>
-        <article><span class="card-code">01 / MATERIAL</span><h3>Superficies durables</h3><p>Materiales de larga vida útil y acabados pensados para facilitar limpieza y mantenimiento.</p></article>
-        <article><span class="card-code">02 / MANTENIMIENTO</span><h3>Arquitectura modular</h3><p>Componentes accesibles para mantenimiento, actualización y eventual sustitución.</p></article>
-        <article><span class="card-code">03 / EXPERIENCIA</span><h3>Menos desperdicio</h3><p>Higiene con agua y aire para reducir el uso cotidiano de papel sanitario.</p></article>
-      </div>
-    </section>
+    <section class="sustainability section" id="sostenibilidad"><div class="section-marker"><span>04</span> Sostenibilidad</div><div class="sustain-head"><div><p class="kicker">El recurso más valioso es el que aprendemos a usar mejor.</p><h2>Menos agua. Más inteligencia.</h2></div><p>AQUA 2040 plantea el ahorro como parte del funcionamiento, no como una función adicional.</p></div><div class="sustain-grid"><article class="sustain-main"><div class="drop">◒</div><span class="card-code">WATER / 2040</span><h3>Descarga inteligente</h3><p>El sistema ajusta el volumen de descarga al ciclo necesario mediante un flujo optimizado.</p><div class="efficiency"><span></span></div><small>OBJETIVO CONCEPTUAL · EFICIENCIA HÍDRICA</small></article><article><span class="card-code">01 / MATERIAL</span><h3>Superficies durables</h3><p>Materiales de larga vida útil y acabados pensados para facilitar limpieza y mantenimiento.</p></article><article><span class="card-code">02 / MANTENIMIENTO</span><h3>Arquitectura modular</h3><p>Componentes accesibles para mantenimiento, actualización y eventual sustitución.</p></article><article><span class="card-code">03 / EXPERIENCIA</span><h3>Menos desperdicio</h3><p>Higiene con agua y aire para reducir el uso cotidiano de papel sanitario.</p></article></div></section>
 
-    <section class="specs section">
-      <div class="section-marker"><span>05</span> Ficha conceptual</div>
-      <div class="specs-grid">
-        <div><span>Dimensiones</span><strong>680 × 380 × 680 mm</strong></div>
-        <div><span>Descarga</span><strong>Flujo optimizado</strong></div>
-        <div><span>Higiene</span><strong>Frontal + posterior</strong></div>
-        <div><span>Secado</span><strong>Aire regulable</strong></div>
-        <div><span>Control</span><strong>Táctil + sensores</strong></div>
-        <div><span>Visión</span><strong>Hogar 2040</strong></div>
-      </div>
-    </section>
+    <section class="specs section"><div class="section-marker"><span>05</span> Ficha conceptual</div><div class="specs-grid"><div><span>Dimensiones</span><strong>680 × 380 × 680 mm</strong></div><div><span>Descarga</span><strong>Flujo optimizado</strong></div><div><span>Higiene</span><strong>Frontal + posterior</strong></div><div><span>Secado</span><strong>Aire regulable</strong></div><div><span>Control</span><strong>Táctil + sensores</strong></div><div><span>Visión</span><strong>Hogar 2040</strong></div></div></section>
 
-    <section class="cta section" id="contacto">
-      <div><p class="eyebrow">AQUA 2040</p><h2>El futuro de la higiene empieza con una mejor relación con el agua.</h2><p>Un concepto de producto que convierte tecnología, ergonomía y sostenibilidad en una experiencia cotidiana.</p></div>
-      <a class="button button-primary" href="https://github.com/memobarrett95-coder/AQUA-2040" target="_blank" rel="noreferrer">Ver proyecto en GitHub ↗</a>
-    </section>
+    <section class="cta section" id="contacto"><div><p class="eyebrow">AQUA 2040</p><h2>El futuro de la higiene empieza con una mejor relación con el agua.</h2><p>Un concepto de producto que convierte tecnología, ergonomía y sostenibilidad en una experiencia cotidiana.</p></div><a class="button button-primary" href="https://github.com/memobarrett95-coder/AQUA-2040" target="_blank" rel="noreferrer">Ver proyecto en GitHub ↗</a></section>
   </main>
-
   <footer class="site-footer"><span>© 2040 AQUA · Concepto de producto</span><span>Diseño industrial · Tecnología · Sostenibilidad</span></footer>
 
   <script>
     const viewer=document.querySelector('#aqua-model');
-    document.querySelectorAll('[data-view]').forEach(btn=>btn.addEventListener('click',()=>{
-      const v=btn.dataset.view;
-      const cameras={front:'0deg 75deg 105%',side:'90deg 75deg 105%',top:'0deg 15deg 120%'};
-      viewer.cameraOrbit=cameras[v]||'0deg 75deg 105%';
-    }));
+    const fallback=document.querySelector('#asset-fallback');
+    const showFallback=()=>fallback.classList.add('visible');
+    viewer.addEventListener('load',()=>fallback.classList.remove('visible'));
+    viewer.addEventListener('error',showFallback);
+    document.querySelectorAll('[data-view]').forEach(btn=>btn.addEventListener('click',()=>{const v=btn.dataset.view;const cameras={front:'0deg 75deg 105%',side:'90deg 75deg 105%',top:'0deg 15deg 120%'};viewer.cameraOrbit=cameras[v]||cameras.front;}));
     document.querySelector('[data-reset]').addEventListener('click',()=>{viewer.cameraOrbit='0deg 75deg 105%';viewer.fieldOfView='auto';});
-    viewer.addEventListener('error',()=>document.querySelector('.model-loading small').textContent='Coloca el archivo 3D en /assets para activarlo');
+    document.querySelector('[data-ar-open]').addEventListener('click',async()=>{try{await viewer.activateAR();}catch(e){alert('La realidad aumentada requiere un teléfono compatible y que los archivos GLB/USDZ estén publicados en /assets.');}});
+    setTimeout(()=>{if(!viewer.loaded) showFallback();},5000);
   </script>
 </body>
 </html>
