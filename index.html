@@ -52,13 +52,13 @@
 <div class="viewer-head"><div><p class="kicker">INTERACTIVO</p><h2>Explora LOOP 01.</h2></div><p>Gira, acerca y examina la geometría del asiento. La variante de color puede cambiarse desde los controles.</p></div>
 <div class="model-box">
 <div class="model-bg"></div>
-<model-viewer id="loop-model" src="./assets/LOOP_01_ORANGE.glb" camera-controls auto-rotate rotation-per-second="12deg" shadow-intensity=".8" exposure="1.05" environment-image="neutral" ar ar-modes="webxr scene-viewer quick-look" alt="Modelo 3D del asiento LOOP 01">
+<model-viewer id="loop-model" src="./assets/Meshy_AI_Orange_Loop_Stool_0927223359_texture.glb" ios-src="./assets/Meshy_AI_Orange_Loop_Stool_0927223412_texture.usdz" camera-controls auto-rotate rotation-per-second="12deg" shadow-intensity=".8" exposure="1.05" environment-image="neutral" ar ar-modes="webxr scene-viewer quick-look" alt="Modelo 3D del asiento LOOP 01">
 <button class="ar-btn" slot="ar-button">Ver en mi espacio ↗</button>
 </model-viewer>
 <div class="model-fallback"><strong>LOOP 01</strong><span>Modelo 3D interactivo</span></div>
 <div class="model-info"><span>ACTIVE SEAT</span><b>01</b></div>
 </div>
-<div class="controls"><span>VISTA</span><button data-color="orange">Naranja</button><button data-color="yellow">Amarillo</button><button data-reset>Restablecer ↻</button><button data-ar>Realidad aumentada ↗</button></div>
+<div class="controls"><span>VISTA</span><button data-color="orange">Naranja</button><button data-color="yellow" disabled title="Disponible cuando subamos el modelo amarillo">Amarillo</button><button data-reset>Restablecer ↻</button><button data-ar>Realidad aumentada ↗</button></div>
 </section>
 
 <section class="ergonomy section" id="ergonomia">
@@ -98,7 +98,7 @@ function recolor(c){ if(!viewer.model)return; for(const m of viewer.model.materi
 viewer.addEventListener('load',()=>recolor('orange'));
 document.querySelectorAll('[data-color]').forEach(b=>b.addEventListener('click',()=>recolor(b.dataset.color)));
 document.querySelector('[data-reset]').onclick=()=>{viewer.cameraOrbit='0deg 75deg 105%';viewer.fieldOfView='auto';recolor('orange')};
-document.querySelector('[data-ar]').onclick=async()=>{try{await viewer.activateAR()}catch(e){alert('La realidad aumentada requiere un dispositivo compatible y un archivo USDZ publicado para Quick Look en iPhone/iPad.')}};
+document.querySelector('[data-ar]').onclick=async()=>{try{await viewer.activateAR()}catch(e){alert('La realidad aumentada requiere un dispositivo compatible con AR Quick Look.')}};
 </script>
 </body>
 </html>
