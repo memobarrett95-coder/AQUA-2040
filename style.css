@@ -23,3 +23,22 @@
  .process-card img{height:260px}
  .register-image{height:250px}
 }
+
+/* LOOP 01 — height sequence and welding drawing */
+.height-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:34px;align-items:start}
+.height-card{margin:0;min-width:0;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--paper)}
+.height-image{height:330px;background:#eee8df;display:flex;align-items:center;justify-content:center;padding:10px}
+.height-image img{display:block;width:100%;height:100%;object-fit:contain}
+.height-card figcaption{padding:18px 19px 20px}
+.height-card figcaption span,.weld-sheet figcaption span{font-size:8px;letter-spacing:.16em;color:var(--orange);font-weight:700}
+.height-card figcaption b,.weld-sheet figcaption b{display:block;font:600 18px 'Space Grotesk';margin:8px 0}
+.height-card figcaption p,.weld-sheet figcaption p{margin:0;color:var(--muted);font-size:11px;line-height:1.65}
+.height-note{margin-top:18px;padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:rgba(251,250,247,.7);display:grid;grid-template-columns:.28fr 1fr;gap:24px}
+.height-note b{font:700 10px 'Space Grotesk';letter-spacing:.1em;color:var(--orange)}
+.height-note p{margin:0;color:var(--muted);font-size:11px;line-height:1.65}
+.weld-sheet{margin:32px 0 0;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--paper)}
+.weld-sheet>a{display:block;padding:16px;background:#f0ece6;text-align:center}
+.weld-sheet img{display:block;width:100%;height:auto;max-height:760px;object-fit:contain;margin:0 auto}
+.weld-sheet figcaption{padding:20px 23px 22px}
+@media(max-width:900px){.height-grid{grid-template-columns:1fr 1fr}.height-image{height:310px}.height-note{grid-template-columns:1fr;gap:8px}.weld-sheet img{max-height:unset}}
+@media(max-width:560px){.height-grid{grid-template-columns:1fr}.height-image{height:300px}.height-card figcaption{padding:16px 17px 18px}.weld-sheet>a{padding:7px}.weld-sheet figcaption{padding:17px}}
